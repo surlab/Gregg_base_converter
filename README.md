@@ -11,6 +11,7 @@ Template repository for building **source format → SurLab** converters at the 
 | `EXAMPLE_ACCESS_CODE_GOES_HERE/` | Reference pipeline code from the source lab (`.py` / `.m`) |
 | `agent_materials/sur_nwb_conversion_table.csv` | SurLab field spec (SurLab → NWB); read-only for converters |
 | `custom_to_sur_mapping_table.csv` | **You author** — maps your source format → SurLab |
+| `metadata_defaults.csv` | User/agent-edited provenance values (strain, species, etc.) — **not** hardcoded in Python |
 | `config.py` | Paths and IDs — fill when implementing |
 | `src/` | Converter modules + `main.py` entry point |
 | `agent_materials/` | Spec docs, `COPY_AND_PASTE_TO_AGENT.txt`, and handoff instructions |

@@ -1,0 +1,10 @@
+fieldname,value,scope,artifact,datatypeID,provenance,notes
+institution,,dataset,sessionInfo,,user or agent,Same for all sessions in this dataset (e.g. MIT)
+lab,,dataset,sessionInfo,,user or agent,
+experimenter,,dataset,sessionInfo,,user or agent,Comma-separate multiple names if needed
+species,,dataset,sessionInfo,,user or agent,Latin binomial e.g. Mus musculus
+strain,,dataset,sessionInfo,,user or agent,Genetic background; often identical across sessions
+institution,,session,sessionInfo,,,Override dataset default for one session only (optional)
+sex,,session,sessionInfo,,,M F O U — per animal
+age__days,,session,sessionInfo,,,Per animal if known
+condition,,session,sessionInfo,,,Experimental condition label

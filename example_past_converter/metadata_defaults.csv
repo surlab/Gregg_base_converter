@@ -1,0 +1,6 @@
+fieldname,value,scope,artifact,datatypeID,provenance,notes
+institution,MIT,dataset,sessionInfo,,user supplied,
+lab,Mriganka Sur,dataset,sessionInfo,,user supplied,
+experimenter,Sofie Ahrlund Richter,dataset,sessionInfo,,user supplied,
+species,Mus musculus,dataset,sessionInfo,,user supplied,
+strain,flex-GCaMP8m x CamkII-Cre,dataset,sessionInfo,,user supplied,Tricolor example

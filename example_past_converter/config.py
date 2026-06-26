@@ -15,7 +15,8 @@ output_dataset_root = PROJECT_ROOT / "EXAMPLE_SURFORMAT_DATASET_WILL_APPEAR_HERE
 access_code_root = PROJECT_ROOT / "EXAMPLE_ACCESS_CODE_GOES_HERE"
 
 sur_nwb_conversion_table_path = REPO_ROOT / "agent_materials" / "sur_nwb_conversion_table.csv"
-custom_to_sur_mapping_table_path = PROJECT_ROOT / "custom_to_sur_mapping_table.csv"
+metadata_defaults_path = PROJECT_ROOT / "metadata_defaults.csv"
+metadata_gap_report_log_path = PROJECT_ROOT / "logs" / "metadata_gap_report.md"
 
 verbose = False
 voltage_ttl_threshold_v = 4.9

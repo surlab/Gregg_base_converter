@@ -27,7 +27,7 @@ Edit **`config.py`** at the repo root:
 - `dataset_id`, `animal_id`, `session_id`
 - Paths under `EXAMPLE_SESSION_DIR_GOES_HERE/`, `EXAMPLE_SURFORMAT_DATASET_WILL_APPEAR_HERE/`, `EXAMPLE_ACCESS_CODE_GOES_HERE/`
 
-Author **`custom_to_sur_mapping_table.csv`** for your source format. Use **`agent_materials/sur_nwb_conversion_table.csv`** as the SurLab target spec.
+Author **`custom_to_sur_mapping_table.csv`** for your source format. Use **`metadata_defaults.csv`** for strain, species, and other provenance the user supplies (not hardcoded in code). Use **`agent_materials/sur_nwb_conversion_table.csv`** as the SurLab target spec.
 
 ## Run
 
@@ -59,13 +59,9 @@ EXAMPLE_ACCESS_CODE_GOES_HERE/
 
 ## Outputs
 
-SurLab dataset files are written under:
+SurLab dataset files are written under `EXAMPLE_SURFORMAT_DATASET_WILL_APPEAR_HERE/`, including `metadata_gap_report.md` when gaps exist.
 
-```
-EXAMPLE_SURFORMAT_DATASET_WILL_APPEAR_HERE/
-```
-
-See `agent_materials/SurLab data format documentation.md` for file naming and schema rules.
+After conversion, check that file and `logs/metadata_gap_report.md` for missing metadata.
 
 ## Quality control
 

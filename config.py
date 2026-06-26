@@ -18,6 +18,10 @@ access_code_root = PROJECT_ROOT / "EXAMPLE_ACCESS_CODE_GOES_HERE"
 
 sur_nwb_conversion_table_path = PROJECT_ROOT / "agent_materials" / "sur_nwb_conversion_table.csv"
 custom_to_sur_mapping_table_path = PROJECT_ROOT / "custom_to_sur_mapping_table.csv"
+metadata_defaults_path = PROJECT_ROOT / "metadata_defaults.csv"
+
+# Written by metadata_gap_audit after each conversion run
+metadata_gap_report_log_path = PROJECT_ROOT / "logs" / "metadata_gap_report.md"
 
 ################
 # computation config

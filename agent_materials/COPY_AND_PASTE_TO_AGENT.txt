@@ -5,3 +5,5 @@ Read agent_handoff_instructions.md, agent_materials/sur_nwb_conversion_table.csv
 Author custom_to_sur_mapping_table.csv for this source format.
 
 Propose an implementation plan and clarify open questions before coding.
+
+Before coding, run a metadata gap audit (see agent_handoff_instructions.md): identify missing required and recommended metadata, ask the user for values, and save dataset-wide fields (strain, species, etc.) to metadata_defaults.csv — not hardcoded in Python. Be very loud about gaps in chat, logs, and the dataset output directory.
