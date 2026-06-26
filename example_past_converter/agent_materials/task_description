@@ -1,0 +1,10 @@
+Hi. Your task will be to create a conversion script to convert the data in demodata from a single session into the surlab standard format using conversion_table.csv in \for_cursor. 
+
+You have been provided the raw data and a code file (______...py/.m) with another users access code.
+You have also been provided with the the conversion_table, and the data format documentation for the target format.
+ 
+ Perhaps a good implementation idea is to add another table mapping the current format into the goal format? this can act as a sentinal the same way the conversion_table acts as a sentinal to NWB.  
+ Timing is important so be sure we are aligning the data streams appropriately. 
+
+ Once you clarify all questions and propose an implementation plan thats approved then we will proceed step by step.
+

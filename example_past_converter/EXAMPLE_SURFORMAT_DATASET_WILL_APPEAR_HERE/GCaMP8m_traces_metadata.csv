@@ -1,0 +1,6 @@
+roi_ID,roi_x_coordinate,roi_y_coordinate,roi_center_x,roi_center_y,iscell,fluorophore_class
+0,405.0,360.0,410.0,363.0,1,unclassified
+1,185.0,470.0,190.0,473.0,1,unclassified
+2,253.0,467.0,256.0,471.0,1,unclassified
+3,268.0,407.0,272.0,411.0,1,unclassified
+4,461.0,312.0,466.0,315.0,1,unclassified

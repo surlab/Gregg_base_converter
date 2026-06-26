@@ -1,0 +1,10 @@
+{
+  "data_unit_measurement": "fluorescence__a.u.",
+  "X_dim": "time",
+  "Y_dim": "ROI",
+  "X_size": 15335,
+  "Y_size": 201,
+  "sample_frequency__Hz": 15.0,
+  "indicator": "GCaMP8m",
+  "detection_software": "Suite2p"
+}

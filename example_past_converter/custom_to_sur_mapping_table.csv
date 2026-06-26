@@ -1,0 +1,11 @@
+row_type,source_location,source_pattern,source_field,surlab_datatypeID,surlab_artifact,surlab_field,transform,stage,notes
+metadata,dataset_config.json,dataset_config.json,institution,sessionInfo,csv,institution,copy,1,Provenance defaults
+metadata,dataset_config.json,dataset_config.json,strain,sessionInfo,csv,strain,copy,1,flex-GCaMP8m x CamkII-Cre
+data,20260204/suite2p/plane0,F.npy,GCaMP8m_traces,data,npz,data,transpose_to_time_x_roi,3,Suite2p (n_roi n_time) to (n_time n_roi)
+data,20260204/suite2p/plane0,Fneu.npy,Neuropil_traces,data,npz,data,transpose_to_time_x_roi,3,Raw neuropil fluorescence
+timestamps,20260204,*.xml relativeTime,GCaMP8m_traces,timestamps,npz,timestamps,xml_seconds_no_shift,3,Imaging zero at frame 0
+metadata,20260204/suite2p/plane0,stat.npy,GCaMP8m_traces,metadata,csv,roi_*,stat_dict,3,Per-ROI positions and iscell
+behavior,exp101.a1.20260204.gratings,*DLC*.csv,pupil_behTSeries,data,npz,data,native_dlc_csv,4,Requires local file (not cloud-only)
+behavior,exp101.a1.20260204.gratings,*_tStamp.txt,pupil_behTSeries,timestamps,npz,timestamps,matlab_to_imaging_offset,4,Apply delta_matlab_to_imaging
+behavior,exp101.a1.npy,wheel_file.npy,wheel_behTSeries,data,npz,data,native_or_empty,4,Empty placeholder if missing
+trials,exp101.a1.npy,stim_file.npy,passive_trialInfo,csv,trial_table,stim_cols,imaging_aligned,5,Voltage TTL + stim_file fill

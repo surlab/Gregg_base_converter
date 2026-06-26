@@ -1,0 +1,37 @@
+Notes_and_clarifications
+
+NOTE!!!! These notes are from a different conversion session. Different source data. In some cases the answer may not be directly applicable - please clarify with the users
+some notes - we don NOT want to do upsampling or downsapling the way the alignemnt script does. Keep everything in native sample rates.  The phases look good. I appreciate you including a validation phase. questions - 1. use "tricolor_projections" - i have updated the dir name to match and added a session dir within the dataset dir. 2. exp101-a1_20260204-gratings. the user uses dots but I prefer underscores please. 3. base folder will just be dataset folder (tricolor_projections). Add a new session forder with the name matching the session ID. I believe this is described in the documentation. in this case animal name is exp101-a1 and sessionID is 20260204-gratings. together they create a unique key. 4. use the 0 of the xml (different from sofies, we don't want those to be negative, its useful spontaneous time for some analysts). 5. no resampling. 6. all rois (retain labels and good status in the metadata csv) 7. One stream - the other labels are sufficient in the metadata, the recording is all gcamp 8. save both F0 and Fneu as seperate data streams (Neuropil_traces) 9. no z score, that operation is easy to apply after. we want native data. also store coordinates - these can be seperate rows/y  in the array, with the metadata CSV clarifying what they are. 10. species is mouse (whatever the proper label is) strain is c57bl6j experimenter is Sofie Ahrlund Richter. instituttion MIT lab is Mriganka Sur. the rest can be defaults. 11. do it the way sofie did it. if there isn't a specific pulse (ran out of time) then interpolate (see what she did and make sure it makes sens). 12. No behavior, this is passive. Maybe prefix the trail_info to passive_trial_info 13. surlab files only 14. include placeholder - no warning.  its should be sufficient to get the form, even if this particular one is empty - thats downstream data qcs job to catch. here are the clarifications - A — Array orientation
+Canonical SurLab: axis 0 = time, axis 1 = ROIs/features (Python (n_time, n_unit); Matlab [time × …]).
+Suite2p (n_ROI, n_time) must be transposed on ingest — stated in doc clarifications table and stage 3/4 notes on data rows.
+
+B — X vs Y schema
+Fixed the contradiction: X_* = axis 0, Y_* = axis 1. For traces/behTSeries: X_dim=time, Y_dim=ROI/features, X_size = n_time, Y_size = n_ROI/features (matches metadata rows). Table rows and doc schema section updated.
+
+C — Resampling
+Native frame times in _timestamps are canonical. No required resampling; optional sample_frequency__Hz is descriptive only. Reference-script 20 Hz upsampling is pipeline-specific, not SurLab.
+
+D — zero_time (Tricolor)
+Canonical for Tricolor/grating: zero_time = primary calcium <datatypeID> (e.g. GCaMP7f_traces) with t = 0 at imaging acquisition start; keep native timestamps (negative pre-stim allowed).
+Do not silently re-zero to first stimulus unless the dataset README documents that and timestamps/trials are handled consistently. The reference script’s “first stim = 0” is not the default SurLab policy.
+
+E — Session folder naming
+Folder = {animal_ID}_{session_ID} with one underscore, literal join. session_ID may contain dots (e.g. exp101.a1.20260204.gratings). Overlap with animal_ID text is fine — they stay separate columns.
+
+F — Multiple trace streams
+Separate stream per indicator/channel product, each with its own <datatypeID> and sessionInfo flag: e.g. GCaMP7f_traces, tdTomato_traces, mCherry_traces.
+Not one combined array for dual-channel + tricolor. F / F_chan2 → separate streams when processed separately; tricolor classes belong in ROI metadata, not as extra streams unless each is its own recording.
+
+G — Required sessionInfo fields
+Still required in the exported sessionInfo CSV. Ingest may fill from dataset_config / sidecar before write. New table row (session_metadata_provenance) documents this (not a real column).
+
+G2 — trialInfo.correct
+Changed to recommended in the table; doc says omit for passive/grating demos without operant outcomes.
+
+H — Conversion table location
+Authoritative: repo root conversion_table.csv. for_cursor/conversion_table.csv is a handoff copy (synced now). Doc updated.
+
+I — .mat vs .npz
+Both valid; prefer .npz for Python export (doc + table notes). any further questions before you code?
+
+1. trial info timestamps should also be aligned to the new imaging 0. 2. looks good -I know its long, but lets keep the info in the filename . 3. mostly yes except these are actually gCamp8m mice. Aha! That should be in the strain - its flex-gcamp8mxcamkII cre for strain. 4. yes, include everything that we have traces data for. 5. that sounds good for the demo! all the fileds speced as mandatory are accounted for I think. 6. sure that sounds fine. 

@@ -1,0 +1,12 @@
+name: replace_with_env_name
+channels:
+  - defaults
+dependencies:
+  - jupyter
+  - jupyterlab
+  - numpy
+  - pandas
+  - scipy
+  - pytables
+  - pip
+  - python=3.10

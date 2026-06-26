@@ -1,0 +1,3 @@
+Instructions for agent
+
+please read the rules, check the task_description.txt document and the resources and form a plan for the implementation. Before you code raise any quetnios and concerns. Does the documentation and conversion table make sense? does it remove/eliminate ambiguity? any questions for the target?  No code yet. 

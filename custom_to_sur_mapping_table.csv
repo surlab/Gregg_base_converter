@@ -1,0 +1,2 @@
+row_type,source_location,source_pattern,source_field,surlab_datatypeID,surlab_artifact,surlab_field,transform,stage,notes
+metadata,EXAMPLE_ACCESS_CODE_GOES_HERE,reference_pipeline.*,,sessionInfo,csv,,,1,Agent fills rows mapping this source format to SurLab artifacts
