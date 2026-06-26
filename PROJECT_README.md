@@ -27,7 +27,7 @@ Edit **`config.py`** at the repo root:
 - `dataset_id`, `animal_id`, `session_id`
 - Paths under `EXAMPLE_SESSION_DIR_GOES_HERE/`, `EXAMPLE_SURFORMAT_DATASET_WILL_APPEAR_HERE/`, `EXAMPLE_ACCESS_CODE_GOES_HERE/`
 
-Author **`custom_to_sur_mapping_table.csv`** for your source format. Use **`sur_nwb_conversion_table.csv`** as the SurLab target spec.
+Author **`custom_to_sur_mapping_table.csv`** for your source format. Use **`agent_materials/sur_nwb_conversion_table.csv`** as the SurLab target spec.
 
 ## Run
 

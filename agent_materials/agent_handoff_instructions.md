@@ -8,8 +8,10 @@ Implement a converter that reads the user's raw session data and writes **SurLab
 
 ## Read first
 
+Copy the prompt in **`agent_materials/COPY_AND_PASTE_TO_AGENT.txt`** into your agent session, then read:
+
 1. `agent_materials/SurLab data format documentation.md`
-2. `sur_nwb_conversion_table.csv` — authoritative SurLab → NWB field spec (do not rewrite)
+2. `agent_materials/sur_nwb_conversion_table.csv` — authoritative SurLab → NWB field spec (do not rewrite)
 3. `example_past_converter/` — architecture sentinel (especially `src/` modules and `custom_to_sur_mapping_table.csv`)
 
 ## You author
@@ -42,7 +44,7 @@ EXAMPLE_ACCESS_CODE_GOES_HERE/                   ← reference pipeline code
 Template cells already cover:
 
 - Entry points (`config.py`, `python -m src.main`)
-- Viewing `sur_nwb_conversion_table.csv` and `custom_to_sur_mapping_table.csv`
+- Viewing `agent_materials/sur_nwb_conversion_table.csv` and `custom_to_sur_mapping_table.csv`
 - Inspecting example SurLab `*_schema.json` and `*_metadata.csv` in `example_past_converter/`
 
 **You must add** cells that visualize **pre-conversion** structure once user data exists, e.g.:
@@ -52,7 +54,7 @@ Template cells already cover:
 
 ## Validation
 
-Validate exports against required fields in `sur_nwb_conversion_table.csv` (see `example_past_converter/src/validate_surlab.py` for patterns).
+Validate exports against required fields in `agent_materials/sur_nwb_conversion_table.csv` (see `example_past_converter/src/validate_surlab.py` for patterns).
 
 ## Optional dependencies
 

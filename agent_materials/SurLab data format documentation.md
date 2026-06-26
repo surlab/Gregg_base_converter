@@ -17,7 +17,7 @@ The SurLab data format provides a standardized framework for storing and analyzi
 
 ## **Conversion table (`sur_nwb_conversion_table.csv`)**
 
-Machine-readable mapping from SurLab files and fields to NWB targets lives in **`sur_nwb_conversion_table.csv`** at the project root. Downstream tooling should treat that file as the spec; this document is the human-readable companion.
+Machine-readable mapping from SurLab files and fields to NWB targets lives in **`agent_materials/sur_nwb_conversion_table.csv`**. Downstream tooling should treat that file as the spec; this document is the human-readable companion.
 
 Each converter also authors **`custom_to_sur_mapping_table.csv`** at the repo root, mapping the **source** format into SurLab artifacts (see `example_past_converter/custom_to_sur_mapping_table.csv` for a Tricolor example).
 

@@ -14,7 +14,7 @@ raw_session_root = PROJECT_ROOT / "EXAMPLE_SESSION_DIR_GOES_HERE" / "example_ses
 output_dataset_root = PROJECT_ROOT / "EXAMPLE_SURFORMAT_DATASET_WILL_APPEAR_HERE"
 access_code_root = PROJECT_ROOT / "EXAMPLE_ACCESS_CODE_GOES_HERE"
 
-sur_nwb_conversion_table_path = REPO_ROOT / "sur_nwb_conversion_table.csv"
+sur_nwb_conversion_table_path = REPO_ROOT / "agent_materials" / "sur_nwb_conversion_table.csv"
 custom_to_sur_mapping_table_path = PROJECT_ROOT / "custom_to_sur_mapping_table.csv"
 
 verbose = False

@@ -1,6 +1,6 @@
 Hi. Your task is to implement a converter from the user's raw session data (under EXAMPLE_SESSION_DIR_GOES_HERE/) into the SurLab standard format.
 
-Read agent_handoff_instructions.md, sur_nwb_conversion_table.csv, and the SurLab format documentation.
+Read agent_handoff_instructions.md, agent_materials/sur_nwb_conversion_table.csv, and the SurLab format documentation.
 
 Author custom_to_sur_mapping_table.csv for this source format.
 

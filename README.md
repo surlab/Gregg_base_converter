@@ -9,11 +9,11 @@ Template repository for building **source format → SurLab** converters at the 
 | `EXAMPLE_SESSION_DIR_GOES_HERE/` | User places raw session files here (`example_session/` subfolder) |
 | `EXAMPLE_SURFORMAT_DATASET_WILL_APPEAR_HERE/` | Converter writes SurLab dataset output here |
 | `EXAMPLE_ACCESS_CODE_GOES_HERE/` | Reference pipeline code from the source lab (`.py` / `.m`) |
-| `sur_nwb_conversion_table.csv` | SurLab field spec (SurLab → NWB); read-only for converters |
+| `agent_materials/sur_nwb_conversion_table.csv` | SurLab field spec (SurLab → NWB); read-only for converters |
 | `custom_to_sur_mapping_table.csv` | **You author** — maps your source format → SurLab |
 | `config.py` | Paths and IDs — fill when implementing |
 | `src/` | Converter modules + `main.py` entry point |
-| `agent_materials/` | Spec docs and agent handoff instructions |
+| `agent_materials/` | Spec docs, `COPY_AND_PASTE_TO_AGENT.txt`, and handoff instructions |
 | `example_past_converter/` | **Non-runnable** reference (Tricolor architecture + code patterns) |
 
 ## Creating a new converter repo from this template
